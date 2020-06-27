@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function relogio() {
+            var data = new Date();
+            var horas = data.getHours();
+            var minutos = data.getMinutes();
+            var segundos = data.getSeconds();
+
+            if (horas < 10) {
+                horas = '0' + horas;
+            }
+            if (minutos < 10) {
+                minutos = '0' + minutos;
+            }
+            if (segundos < 10) {
+                segundos = '0' + segundos;
+            }
+            document.getElementById('relogio').innerHTML = horas + ':' + minutos + ':' + segundos;
+        }
+        window.setInterval('relogio()', 1000)
+    </script>
+
+    <style>
+        #centro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #000000;
+
+        }
+
+        #relogio {
+            margin-top: 10px;
+            color: #0c0000;
+            background-color: #f8fc0b;
+            border: 2px solid yellow;
+            padding: 110px 110px;
+            border-radius: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="centro">
+        <div id="relogio">
+
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
